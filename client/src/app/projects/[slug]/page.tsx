@@ -1,8 +1,8 @@
+import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 
 import projectsService from "@/src/sanity/services/projectsService";
 import ChipList from "@/src/components/ChipList";
-import Image from "next/image";
 
 interface Props {
   params: {
@@ -48,7 +48,7 @@ const ProjectPage = async ({ params: { slug } }: Props) => {
       <div className="flex flex-col mt-4 space-y-2">
         <h2 className="text-2xl font-semibold">Screenshots</h2>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-1">
+        <div className="flex overflow-x-scroll space-x-2">
           {project.imagesURLs.map((url, i) => (
             <Image key={i} src={url} alt="" width={250} height={250} />
           ))}
