@@ -4,6 +4,7 @@ interface Social {
 }
 
 interface About {
+  _id: string;
   name: string;
   description: string;
   social: Social;
@@ -15,9 +16,11 @@ interface Stack {
 }
 
 interface Project {
-  id: number;
+  _id: string;
+  slug: string;
   name: string;
   description: string;
+  imageURL: string;
   stack: Stack;
   githubLink: string;
 }

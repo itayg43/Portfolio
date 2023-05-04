@@ -1,8 +1,15 @@
-import { about, projects } from "@/constants";
 import SocialList from "@/components/SocialList";
 import ProjectList from "@/components/ProjectList";
 
-const HomePage = () => {
+import aboutService from "@/sanity/services/aboutService";
+import projectsService from "@/sanity/services/projectsService";
+
+const HomePage = async () => {
+  const [about, projects] = await Promise.all([
+    aboutService.getAbout(),
+    projectsService.getProjects(),
+  ]);
+
   return (
     <div className="p-4">
       {/** social */}
