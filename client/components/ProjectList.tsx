@@ -17,7 +17,7 @@ const ProjectList = ({ items }: Props) => {
               {index + 1}. {item.name}
             </span>
 
-            <p className="mt-2">{item.description}</p>
+            <p className="mt-2 line-clamp-3">{item.description}</p>
           </Link>
         </div>
       ))}
