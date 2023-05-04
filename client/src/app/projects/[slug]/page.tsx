@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import projectsService from "@/sanity/services/projectsService";
+import projectsService from "@/src/sanity/services/projectsService";
 
 interface Props {
   params: {

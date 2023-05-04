@@ -1,8 +1,8 @@
-import SocialList from "@/components/SocialList";
-import ProjectList from "@/components/ProjectList";
+import SocialList from "@/src/components/SocialList";
+import ProjectList from "@/src/components/ProjectList";
 
-import aboutService from "@/sanity/services/aboutService";
-import projectsService from "@/sanity/services/projectsService";
+import aboutService from "@/src/sanity/services/aboutService";
+import projectsService from "@/src/sanity/services/projectsService";
 
 const HomePage = async () => {
   const [about, projects] = await Promise.all([
