@@ -18,15 +18,15 @@ const HomePage = async () => {
       </div>
 
       {/** name */}
-      <h1 className="mt-4 text-4xl font-bold">{about.name}</h1>
+      <h1 className="mt-8 text-4xl font-bold">{about.name}</h1>
 
       {/** description */}
-      <p className="max-w-2xl mt-4">{about.description}</p>
+      <p className="max-w-2xl mt-8">{about.description}</p>
 
       {/** projects */}
-      <h2 className="mt-4 text-2xl font-semibold">Selected Projects</h2>
+      <h2 className="mt-8 text-2xl font-semibold">Selected Projects</h2>
 
-      <div className="mt-4 space-y-2">
+      <div className="mt-4">
         <ProjectList items={projects} />
       </div>
     </div>
