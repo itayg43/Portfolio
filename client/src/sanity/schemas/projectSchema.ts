@@ -12,9 +12,7 @@ const projectSchema = {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: {
-        source: "name",
-      },
+      options: { source: "name" },
     },
     {
       name: "description",
@@ -22,12 +20,10 @@ const projectSchema = {
       type: "string",
     },
     {
-      name: "image",
-      title: "Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      name: "images",
+      title: "Images",
+      type: "array",
+      of: [{ type: "image" }],
     },
     {
       name: "stack",
@@ -38,21 +34,13 @@ const projectSchema = {
           name: "frontend",
           title: "Frontend",
           type: "array",
-          of: [
-            {
-              type: "string",
-            },
-          ],
+          of: [{ type: "string" }],
         },
         {
           name: "backend",
           title: "Backend",
           type: "array",
-          of: [
-            {
-              type: "string",
-            },
-          ],
+          of: [{ type: "string" }],
         },
       ],
     },

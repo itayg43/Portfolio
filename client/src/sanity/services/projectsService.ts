@@ -9,9 +9,6 @@ const getProjects = async (): Promise<Project[]> => {
             name,
             "slug": slug.current,
             description,
-            "imageURL": image.asset->url,
-            stack,
-            githubLink
         }`
   );
 };
@@ -23,7 +20,7 @@ const getProjectBySlug = async (slug: string): Promise<Project> => {
             name,
             "slug": slug.current,
             description,
-            "imageURL": image.asset->url,
+            "imagesURLs": images[].asset->url,
             stack,
             githubLink 
     }`,

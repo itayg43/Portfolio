@@ -17,10 +17,10 @@ interface Stack {
 
 interface Project {
   _id: string;
-  slug: string;
   name: string;
+  slug: string;
   description: string;
-  imageURL: string;
+  imagesURLs: string[];
   stack: Stack;
   githubLink: string;
 }
