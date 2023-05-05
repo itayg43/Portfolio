@@ -20,6 +20,18 @@ const projectSchema = {
       type: "string",
     },
     {
+      name: "frontendDescription",
+      title: "Frontend Description",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      name: "backendDescription",
+      title: "Backend Description",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
       name: "images",
       title: "Images",
       type: "array",

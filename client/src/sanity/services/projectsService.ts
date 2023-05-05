@@ -1,33 +1,12 @@
-import { groq } from "next-sanity";
-
 import sanityClient from "../sanityClient";
+import projectsQueries from "../queries/projectsQueries";
 
 const getProjects = async (): Promise<Project[]> => {
-  return await sanityClient.fetch(
-    groq`*[_type == "project"] | order(_createdAt asc){
-            _id,
-            name,
-            "slug": slug.current,
-            description,
-        }`
-  );
+  return await sanityClient.fetch(projectsQueries.projects);
 };
 
 const getProjectBySlug = async (slug: string): Promise<Project> => {
-  return await sanityClient.fetch(
-    groq`*[_type == "project" && slug.current == $slug][0]{
-            _id,
-            name,
-            "slug": slug.current,
-            description,
-            "imagesURLs": images[].asset->url,
-            stack,
-            githubLink 
-    }`,
-    {
-      slug,
-    }
-  );
+  return await sanityClient.fetch(projectsQueries.projectBySlug, { slug });
 };
 
 export default {
