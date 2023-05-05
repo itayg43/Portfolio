@@ -12,7 +12,7 @@ const HomePage = async () => {
   return (
     <div className="p-4">
       {/** description */}
-      <p className="max-w-2xl">{about.description}</p>
+      <p className="max-w-2xl text-lg">{about.description}</p>
 
       {/** projects */}
       <h2 className="mt-8 text-2xl font-semibold">Selected Projects</h2>
