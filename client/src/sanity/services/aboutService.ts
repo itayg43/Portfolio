@@ -8,7 +8,7 @@ const getAbout = async (): Promise<About> => {
             _id,
             name,
             description,
-            social
+            socialLinks
         }`
   );
 };

@@ -14,21 +14,10 @@ const aboutSchema = {
       type: "string",
     },
     {
-      name: "social",
-      title: "Social",
-      type: "object",
-      fields: [
-        {
-          name: "github",
-          title: "Github",
-          type: "url",
-        },
-        {
-          name: "linkedin",
-          title: "Linkedin",
-          type: "url",
-        },
-      ],
+      name: "socialLinks",
+      title: "Social Links",
+      type: "array",
+      of: [{ type: "string" }],
     },
   ],
 };

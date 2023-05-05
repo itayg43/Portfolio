@@ -14,7 +14,7 @@ const HomePage = async () => {
     <div className="p-4">
       {/** social */}
       <div className="flex justify-center space-x-2">
-        <SocialList items={about.social} />
+        <SocialList items={about.socialLinks} />
       </div>
 
       {/** name */}

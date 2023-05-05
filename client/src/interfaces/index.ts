@@ -1,13 +1,8 @@
-interface Social {
-  github: string;
-  linkedin: string;
-}
-
 interface About {
   _id: string;
   name: string;
   description: string;
-  social: Social;
+  socialLinks: string[];
 }
 
 interface Stack {

@@ -1,16 +1,16 @@
 import { SocialIcon } from "react-social-icons";
 
 interface Props {
-  items: Social;
+  items: string[];
 }
 
 const SocialList = ({ items }: Props) => {
   return (
     <>
-      {Object.values(items).map((url, i) => (
+      {items.map((v, i) => (
         <SocialIcon
           key={i}
-          url={url}
+          url={v}
           target="_blank"
           bgColor="black"
           fgColor="white"
