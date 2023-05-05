@@ -4,7 +4,7 @@ import sanityClient from "../sanityClient";
 
 const getProjects = async (): Promise<Project[]> => {
   return await sanityClient.fetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "project"] | order(_createdAt asc){
             _id,
             name,
             "slug": slug.current,
