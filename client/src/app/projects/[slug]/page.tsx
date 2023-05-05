@@ -15,23 +15,19 @@ const ProjectPage = async ({ params: { slug } }: Props) => {
 
   return (
     <div className="flex flex-col p-4 max-w-2xl">
-      <SocialIcon
-        url={project.githubLink}
-        target="_blank"
-        bgColor="black"
-        fgColor="white"
-        style={{
-          width: 40,
-          height: 40,
-          alignSelf: "center",
-        }}
-      />
+      {/** name & github link */}
+      <div className="flex justify-between">
+        <h1 className="text-4xl fond-bold">{project.name}</h1>
 
-      {/** name */}
-      <h1 className="mt-4 text-4xl fond-bold">{project.name}</h1>
+        <SocialIcon
+          url={project.githubLink}
+          target="_blank"
+          style={{ width: 35, height: 35 }}
+        />
+      </div>
 
       {/** description */}
-      <p className="mt-4">{project.description}</p>
+      <p className="text-lg mt-4">{project.description}</p>
 
       {/** stack */}
       <div className="flex flex-col mt-4 space-y-2">
