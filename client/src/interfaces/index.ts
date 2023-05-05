@@ -1,8 +1,5 @@
 interface About {
-  _id: string;
-  name: string;
   description: string;
-  socialLinks: string[];
 }
 
 interface Stack {
