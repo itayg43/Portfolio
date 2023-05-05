@@ -12,6 +12,8 @@ const projectBySlug = groq`*[_type == "project" && slug.current == $slug][0]{
     name,
     "slug": slug.current,
     description,
+    frontendDescription,
+    backendDescription,
     "imagesURLs": images[].asset->url,
     stack,
     githubLink 

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { Project } from "../interfaces";
+
 interface Props {
   items: Project[];
 }

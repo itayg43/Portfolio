@@ -1,17 +1,21 @@
-interface About {
+import { PortableTextBlock } from "sanity";
+
+export interface About {
   description: string;
 }
 
-interface Stack {
+export interface Stack {
   frontend?: string[];
   backend?: string[];
 }
 
-interface Project {
+export interface Project {
   _id: string;
   name: string;
   slug: string;
   description: string;
+  frontendDescription?: PortableTextBlock[];
+  backendDescription?: PortableTextBlock[];
   imagesURLs: string[];
   stack: Stack;
   githubLink: string;

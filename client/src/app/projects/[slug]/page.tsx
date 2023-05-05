@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
+import { PortableText } from "@portabletext/react";
 
 import projectsService from "@/src/sanity/services/projectsService";
 import ChipList from "@/src/components/ChipList";
@@ -16,7 +17,7 @@ const ProjectPage = async ({ params: { slug } }: Props) => {
   return (
     <div className="flex flex-col p-4 max-w-2xl">
       {/** name & github link */}
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <h1 className="text-4xl fond-bold">{project.name}</h1>
 
         <SocialIcon
@@ -52,6 +53,24 @@ const ProjectPage = async ({ params: { slug } }: Props) => {
           </div>
         )}
       </div>
+
+      {/** frontend description */}
+      {project.frontendDescription && (
+        <div className="mt-4 space-y-2">
+          <h2 className="text-2xl font-semibold">Frontend</h2>
+
+          <PortableText value={project.frontendDescription} />
+        </div>
+      )}
+
+      {/** frontend description */}
+      {project.backendDescription && (
+        <div className="mt-4 space-y-2">
+          <h2 className="text-2xl font-semibold">Backend</h2>
+
+          <PortableText value={project.backendDescription} />
+        </div>
+      )}
     </div>
   );
 };
