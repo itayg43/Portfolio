@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header className="container mx-auto max-w-3xl bg-gray-200 rounded-b mb-8">
       <div className="flex justify-between p-4">
-        <Link className={`${handlee.className} text-2xl font-bold`} href="/">
+        <Link className={`${handlee.className} text-3xl font-bold`} href="/">
           Itay Gur
         </Link>
 
