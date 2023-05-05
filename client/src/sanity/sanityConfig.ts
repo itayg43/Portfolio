@@ -8,7 +8,7 @@ const sanityConfig = defineConfig({
   dataset: "production",
   title: "Portfolio",
   apiVersion: "2023-05-04",
-  basePath: "/sanityStudio",
+  basePath: "/admin",
   plugins: [deskTool()],
   schema: { types: schemas },
 });
