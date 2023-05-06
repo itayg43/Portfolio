@@ -1,7 +1,7 @@
 import { PortableTextBlock } from "sanity";
 
 export interface About {
-  description: string;
+  description: PortableTextBlock[];
 }
 
 export interface Stack {
