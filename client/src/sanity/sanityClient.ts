@@ -4,7 +4,7 @@ const sanityClient = createClient({
   projectId: "zpacskvu",
   dataset: "production",
   apiVersion: "2023-05-04",
-  useCdn: true,
+  useCdn: process.env.NODE_ENV === "production",
 });
 
 export default sanityClient;
