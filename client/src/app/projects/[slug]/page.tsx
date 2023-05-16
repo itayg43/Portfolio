@@ -30,6 +30,17 @@ const ProjectPage = async ({ params: { slug } }: Props) => {
       {/** description */}
       <p className="text-lg mt-4">{project.description}</p>
 
+      {/** live url */}
+      {project.liveUrl && (
+        <a
+          className="text-lg font-semibold mt-4 hover:underline hover:text-blue-600"
+          href={project.liveUrl}
+          target="_blank"
+        >
+          Live Demo
+        </a>
+      )}
+
       {/** stack */}
       <div className="flex flex-col mt-4 space-y-2">
         <h2 className="text-2xl font-semibold">Stack</h2>

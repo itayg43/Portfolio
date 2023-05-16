@@ -16,7 +16,8 @@ const projectBySlug = groq`*[_type == "project" && slug.current == $slug][0]{
     backendDescription,
     "imagesURLs": images[].asset->url,
     stack,
-    githubLink 
+    githubLink,
+    liveUrl
 }`;
 
 export default {

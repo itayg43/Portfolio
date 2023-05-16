@@ -61,6 +61,11 @@ const projectSchema = {
       title: "GithubLink",
       type: "url",
     },
+    {
+      name: "liveUrl",
+      title: "Live Url",
+      type: "url",
+    },
   ],
 };
 

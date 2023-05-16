@@ -19,4 +19,5 @@ export interface Project {
   imagesURLs: string[];
   stack: Stack;
   githubLink: string;
+  liveUrl: string;
 }
