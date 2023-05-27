@@ -33,7 +33,7 @@ const ProjectPage = async ({ params: { slug } }: Props) => {
       {/** live url */}
       {project.liveUrl && (
         <a
-          className="text-lg font-semibold mt-4 hover:underline hover:text-blue-600"
+          className="mt-4 text-center text-lg text-white font-semibold bg-blue-600 hover:bg-blue-500 p-2 rounded"
           href={project.liveUrl}
           target="_blank"
         >
