@@ -9,6 +9,15 @@ export interface Stack {
   backend?: string[];
 }
 
+export interface Experience {
+  _id: string;
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  stack: Stack;
+}
+
 export interface Project {
   _id: string;
   name: string;

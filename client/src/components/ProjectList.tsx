@@ -11,7 +11,7 @@ const ProjectList = ({ items }: Props) => {
     <>
       {items.map((item) => (
         <Link key={item._id} href={`/projects/${item.slug}`} target="_blank">
-          <div className="mt-2 max-w-2xl p-4 border-2 border-solid border-black rounded hover:bg-slate-200 transition ease-in-out duration-500 cursor-pointer">
+          <div className="mt-4 max-w-2xl p-4 border-2 border-solid border-black rounded hover:bg-slate-200 transition ease-in-out duration-500 cursor-pointer">
             <span className="font-semibold">{item.name}</span>
 
             <p className="mt-2 line-clamp-3">{item.description}</p>
